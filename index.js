@@ -7,7 +7,7 @@ for(var i=0;i<len;i++){
 
     Btn.addEventListener("click",function(){
         var text=this.innerHTML;
-        Animation(Btn);
+        
         handler(text);
         
     });
@@ -44,6 +44,20 @@ function handler(text){
     }
 
 }
-function Animation(Btn){
-    
+
+var form=document.querySelector("form");
+var name1=form.querySelector("#name");
+var email=form.querySelector("#email");
+var password=form.querySelector("#password");
+
+form.addEventListener("submit",Handler);
+function Handler(e){
+e.preventDefault();
+ var personInfo={
+    name: name1.value,
+    email:email.value,
+    password:password.value,
+ }
+ console.log(personInfo);
+ 
 }

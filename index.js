@@ -59,5 +59,8 @@ e.preventDefault();
     password:password.value,
  }
  console.log(personInfo);
+ name1.value="";
+ email.value="";
+ password.value="";
  
 }
